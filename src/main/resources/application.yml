@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/usersdb?serverTimezone=Europe/Moscow&amp
+    username: root
+    password: 01v891ea
+    #driver-class-name: org.postgresql.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 1
+      connection-timeout: 10000
+      idle-timeout: 10000
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+server:
+  port: 8182
