@@ -16,7 +16,7 @@ Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
     <table border="1" cellpadding="5">
         <tr>
             <th>ID</th>
-            <th>Firstname</th>
+            <th>Username</th>
             <th>Lastname</th>
             <th>Age</th>
             <th>Action</th>
@@ -24,7 +24,7 @@ Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
         <c:forEach items="${listUser}" var="user">
             <tr>
                 <td>${user.id}</td>
-                <td>${user.firstname}</td>
+                <td>${user.username}</td>
                 <td>${user.lastname}</td>
                 <td>${user.age}</td>
                 <td>

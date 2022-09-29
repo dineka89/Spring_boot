@@ -5,16 +5,16 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "users")
+@Table(name = "user")
 public class User {
     @Id
     @GeneratedValue
     private Long id;
 
-    @Column
-    private String firstname;
+    @Column(name = "user_name")
+    private String username;
 
-    @Column
+    @Column(name = "last_name")
     private String lastname;
 
     @Column
@@ -33,11 +33,11 @@ public class User {
     }
 
     public String getName() {
-        return firstname;
+        return username;
     }
 
     public void setName(String name) {
-        this.firstname = name;
+        this.username = name;
     }
 
     public String getLastname() {
@@ -56,17 +56,17 @@ public class User {
         this.age = age;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String getUsername() {
+        return username;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setUsername(String firstname) {
+        this.username = firstname;
     }
 
     public User(Long id, String name, String lastname, Byte age) {
         this.id = id;
-        this.firstname = name;
+        this.username = name;
         this.lastname = lastname;
         this.age = age;
     }
@@ -84,7 +84,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", name='" + firstname + '\'' +
+                ", name='" + username + '\'' +
                 ", lastName='" + lastname + '\'' +
                 ", age=" + age +
                 '}';

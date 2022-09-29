@@ -21,7 +21,7 @@
             </tr>
             <tr>
                 <td>firstname: </td>
-                <td><form:input path="firstname" /></td>
+                <td><form:input path="username" /></td>
             </tr>
             <tr>
                 <td>lastname: </td>
